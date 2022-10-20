@@ -1,6 +1,17 @@
 name: Auto deploy
 on:
   workflow_call:
+    secrets:
+      PRIVATE_KEY:
+        required: true
+      USER_NAME:
+        required: true
+      HOST_NAME:
+        required: true
+      SERVER_PORT:
+        required: true
+      DEPLOY_PATH:
+        required: true
 jobs:
   ssh-deploy:
     runs-on: ubuntu-latest

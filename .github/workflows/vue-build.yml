@@ -20,4 +20,4 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v4.2.0
       with:
         commit_message: "Build: ({sha}) {msg}"
-        branch: ${GITHUB_REF#refs/heads/}
+        branch: "${GITHUB_REF#refs/heads/}"
